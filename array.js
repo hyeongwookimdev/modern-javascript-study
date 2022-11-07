@@ -46,3 +46,22 @@ console.log(resultUnshift); // 6 (변경된 length 프로퍼티 반환)
 let resultShift = arr.shift();
 console.log(arr); // [ 'orange', 'potato', 'banana', 'avocado', 'tomato' ]
 console.log(resultShift); // apple (첫 번째 요소 제거 후, 제거한 요소 반환)
+
+// 27.8.7 Array.prototype.concat (스프레드 문법 사용 권장)
+const arr3 = ["apple", "mango"];
+let resultConcat = arr.concat(arr3);
+// 인수를 원본 배열의 마지막 요소로 추가후 새로운 배열을 반환
+console.log(resultConcat); // ['orange', 'potato', 'banana', 'avocado', 'tomato', 'apple', 'mango']
+
+// 27.8.8 Array.prototype.splice
+// splice(a, b, c,...)
+// a: 원본 배열의 요소를 제거하기 시작할 인덱스
+// b: a부터 제거할 요소의 개수 (옵션)
+// c: 제거한 위치에 삽입할 요소들의 목록 (옵션)
+console.log(arr); // [ 'orange', 'potato', 'banana', 'avocado', 'tomato' ]
+arr.splice(-1);
+console.log(arr); // [ 'orange', 'potato', 'banana', 'avocado' ]
+arr.splice(0, 1, "tomato");
+console.log(arr); // [ 'tomato', 'potato', 'banana', 'avocado' ]
+arr.splice(2, 1);
+console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
