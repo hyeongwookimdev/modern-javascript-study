@@ -65,3 +65,8 @@ arr.splice(0, 1, "tomato");
 console.log(arr); // [ 'tomato', 'potato', 'banana', 'avocado' ]
 arr.splice(2, 1);
 console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
+
+// 27.8.9 Array.prototype.slice
+console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
+console.log(arr.slice(0, 2)); // [ 'tomato', 'potato' ]
+console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
