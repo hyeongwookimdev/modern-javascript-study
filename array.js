@@ -143,3 +143,7 @@ const menus = [
 const filterMenu = menus.filter((item) => item.includes("밀크티"));
 
 console.log(filterMenu); // [ '블랙밀크티', '타로밀크티', '제주그린밀크티' ]
+
+// 27.9.5 Array.prototype.reduce
+const sum = [1, 2, 3, 4].reduce((acc, cur, index, arr) => acc + cur, 0);
+console.log(sum); // 10
