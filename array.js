@@ -91,3 +91,30 @@ arr.fill("Boom!", 0, 2);
 console.log(arr); // [ 'Boom!', 'Boom!', 'tomato' ]
 arr.fill("Boom!");
 console.log(arr); // [ 'Boom!', 'Boom!', 'Boom!' ]
+
+// 27.8.13 Array.prototype.includes()
+arr.splice(0, arr.length, "tomato", "potato", "avocado");
+console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
+console.log(arr.includes("tomato")); // true
+console.log(arr.includes("banana")); // false
+console.log(arr.includes("tomato", 1)); // false
+console.log(arr.includes("avocado", -1)); // true (arr.length - 1부터 확인 한다는 뜻)
+
+// 27.8.14 Array.prototype.flat()
+const arr4 = [1, [2, [3, [4]]]];
+console.log(arr4.flat()); // [ 1, 2, [ 3, [ 4 ] ] ]
+console.log(arr4.flat(2)); // [ 1, 2, 3, [ 4 ] ]
+console.log(arr4.flat(3)); // [ 1, 2, 3, 4 ]
+console.log(arr4.flat(Infinity)); // [ 1, 2, 3, 4 ]
+
+// 27.9.1 Array.prototype.sort
+arr.splice(0, arr.length, "butter", "cocoa", "apple");
+console.log(arr); // [ 'butter', 'cocoa', 'apple' ]
+arr.sort();
+console.log(arr); // [ 'apple', 'butter', 'cocoa' ]
+
+const arr5 = [40, 100, 1, 5, 2, 25, 10];
+arr5.sort((a, b) => a - b);
+console.log(arr5);
+arr5.sort((a, b) => b - a);
+console.log(arr5);
