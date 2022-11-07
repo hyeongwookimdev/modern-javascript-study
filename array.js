@@ -70,3 +70,24 @@ console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
 console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
 console.log(arr.slice(0, 2)); // [ 'tomato', 'potato' ]
 console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
+
+// 27.8.10 Array.prototype.join
+console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
+console.log(arr.join()); // tomato,potato,avocado
+console.log(arr.join("")); // tomatopotatoavocado
+console.log(arr.join(":")); // tomato:potato:avocado
+console.log(arr); // [ 'tomato', 'potato', 'avocado' ] (원본 유지)
+
+// 27.8.11 Array.prototype.reverse
+console.log(arr); // [ 'tomato', 'potato', 'avocado' ]
+console.log(arr.reverse()); // [ 'avocado', 'potato', 'tomato' ]
+console.log(arr); // [ 'avocado', 'potato', 'tomato' ] (원본 변경)
+
+// 27.8.12 Array.prototype.fill
+console.log(arr); // [ 'avocado', 'potato', 'tomato' ]
+arr.fill("Boom!", 0, 1);
+console.log(arr); // [ 'Boom!', 'potato', 'tomato' ]
+arr.fill("Boom!", 0, 2);
+console.log(arr); // [ 'Boom!', 'Boom!', 'tomato' ]
+arr.fill("Boom!");
+console.log(arr); // [ 'Boom!', 'Boom!', 'Boom!' ]
