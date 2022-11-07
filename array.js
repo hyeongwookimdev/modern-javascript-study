@@ -118,3 +118,28 @@ arr5.sort((a, b) => a - b);
 console.log(arr5);
 arr5.sort((a, b) => b - a);
 console.log(arr5);
+
+// 27.9.2 Array.prototype.forEach
+const numArr = [1, 2, 3];
+numArr.forEach((item, index, arr) => {
+  arr[index] = item * 2;
+});
+console.log(numArr); // [ 2, 4, 6 ]
+
+// 27.9.3 Array.prototype.map
+console.log(numArr); // [ 2, 4, 6 ]
+const mapArr = numArr.map((item) => item / 2);
+console.log(mapArr); // [ 1, 2, 3 ]
+
+// 27.9.4 Array.prototype.filter
+const menus = [
+  "블랙밀크티",
+  "타로밀크티",
+  "망고요구르트",
+  "청포도그린티",
+  "제주그린밀크티",
+];
+
+const filterMenu = menus.filter((item) => item.includes("밀크티"));
+
+console.log(filterMenu); // [ '블랙밀크티', '타로밀크티', '제주그린밀크티' ]
