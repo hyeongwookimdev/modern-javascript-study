@@ -1,18 +1,18 @@
-const fibonacci = function (max) {
+const fibonacciInfi = function () {
   let [pre, cur] = [0, 1];
 
   return {
     [Symbol.iterator]() {
       return this;
     },
-
     next() {
       [pre, cur] = [cur, pre + cur];
-      return { value: cur, done: cur >= max };
+      return { value: cur };
     },
   };
 };
 
-for (const num of fibonacci(10)) {
-  console.log(num); // 1 2 3 5 8
+for (const num of fibonacciInfi()) {
+  if (num > 10000) break;
+  console.log(num);
 }
