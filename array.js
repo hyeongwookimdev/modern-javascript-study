@@ -174,3 +174,13 @@ console.log(company.find((user) => user.level === "사원")); // { level: '사�
 
 // 27.9.9 Array.prototype.findIndex
 console.log(company.findIndex((user) => user.level === "사원")); // 2
+
+// 27.9.10 Array.prototype.flatMap
+const arr6 = ["hello", "world"];
+
+console.log(arr6.map((x) => x.split("")));
+// [ [ 'h', 'e', 'l', 'l', 'o' ], [ 'w', 'o', 'r', 'l', 'd' ] ]
+console.log(arr6.map((x) => x.split("")).flat());
+// ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd'];
+console.log(arr6.flatMap((x) => x.split("")));
+// ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']
