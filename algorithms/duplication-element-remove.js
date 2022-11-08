@@ -8,4 +8,18 @@ const result = values.reduce(
   []
 );
 
-console.log(result);
+console.log(result); // [ 1, 2, 3, 5, 4 ]
+
+// filter 사용
+
+const resultFilter = values.filter(
+  (val, i, _values) => _values.indexOf(val) === i
+);
+
+console.log(resultFilter); // [ 1, 2, 3, 5, 4 ]
+
+// set 사용
+
+const resultSet = [...new Set(values)];
+
+console.log(resultSet); // [ 1, 2, 3, 5, 4 ]

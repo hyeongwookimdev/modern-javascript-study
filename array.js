@@ -147,3 +147,30 @@ console.log(filterMenu); // [ '블랙밀크티', '타로밀크티', '제주그�
 // 27.9.5 Array.prototype.reduce
 const sum = [1, 2, 3, 4].reduce((acc, cur, index, arr) => acc + cur, 0);
 console.log(sum); // 10
+
+// 27.9.6 Array.prototype.some
+console.log([2, 3, 4].some((item) => item % 2 === 0)); // true
+console.log(
+  ["블랙밀크티", "망고요구르트", "청포도그린티"].some((item) =>
+    item.includes("밀크티")
+  )
+); // true
+
+// 27.9.7 Array.prototype.every
+
+console.log([2, 4, 6].every((item) => item % 2 === 0)); // true
+console.log([2, 4, 6].every((item) => item % 3 === 0)); // false
+
+// 27.9.8 Array.prototype.find
+
+const company = [
+  { level: "사장", name: "Hyuwoo" },
+  { level: "부장", name: "Taesan" },
+  { level: "사원", name: "Daegil" },
+  { level: "사원", name: "Bom" },
+];
+
+console.log(company.find((user) => user.level === "사원")); // { level: '사원', name: 'Daegil' }
+
+// 27.9.9 Array.prototype.findIndex
+console.log(company.findIndex((user) => user.level === "사원")); // 2
