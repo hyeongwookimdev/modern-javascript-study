@@ -57,3 +57,11 @@ console.log(myCardNum); // "1234-****-****-****"
 // 32.3.13 String.prototype.replace
 const myName = "Hello, my name is Hyuwoo";
 console.log(myName.replace("Hyuwoo", "Taesan")); // Hello, my name is Taesan
+
+// 32.3.14 String.prototype.split
+const str8 = "2022-11-8";
+console.log(str8.split("-")); // [ '2022', '11', '8' ]
+console.log(str8.split("-").join(".")); // "2022.11.8"
+
+const str9 = "221108-3******";
+console.log(str9.split("-", 1)); // [ '221108' ]
